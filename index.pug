@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="")
+        meta(name="author" content="Aman Kumar")
+        link(rel="stylesheet" type="text/css" href="./style/style.css")
+        title SmartServ | Assignment 2
+
+    body
+        p.title Import Products
+        .main
+            .step
+                .name Step 1:
+                .step-main
+                    p Selecte File 
+                    input#file(type="file")
+                    p Supported File Types(s): .CSV, .JSON
+
+            .step
+                .name Step 2:
+                .step-main
+                    p Specify Format
+                    form(action="")
+                        div
+                            label(for="fileType") File Type
+                            select(name="fileType")
+                                option(value="json") json
+                                option(value="csv") csv
+                        
+                        div
+                            label(for="charEncoding") Character Encoding
+                            select(name="charEncoding")
+                                option(value="utf-8") UTF-8
+                                option(value="utf-16") UTF-16
+                                option(value="utf-32") UTF-32
+
+                        div
+                            label(for="delimiter") Delimiter
+                            select(name="delimiter")
+                                option(value="comma") comma
+                                option(value="space") space
+
+                        div
+                            label(for="header") Has Header 
+                            input(type="checkbox" name="header" checked)
+
+        .step#step3 
+            .name
+                input(type="checkbox" name="Step" checked)
+                label(for="Step") Step 3:
+            .step-main 
+                p Display Handling 
+                p Select the field to be displayed
+
+                .field-box 
+                    .available-fields
+                        .field-title Available Fields
+                        .field 
+                            
+                    .field-button 
+                        button.add >>
+                        button.remove <<
+
+                    .display-fields
+                        .field-title Fields to be Displayed
+                        .field 
+
+        .buttons 
+            button.next Next 
+            button.cancel Cancel 
+
+        .table
+            .table-header
+            .table-content
+
+
+    script(src="./script/jquery.min.js") 
+    script(src="./script/script.js") 
